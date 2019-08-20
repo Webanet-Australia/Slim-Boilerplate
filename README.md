@@ -5,7 +5,7 @@
 
 ## Fork for SB Admin 2 dashboard from startbootstrap.com.
 
-[![Screenshot](https://raw.githubusercontent.com/Webanet-Australia/Slim-Boilerplate/master/screenshot.jpg)]
+![Screenshot](https://raw.githubusercontent.com/Webanet-Australia/Slim-Boilerplate/master/screenshot.jpg)
 
 
 ### Original project documentation
