@@ -8,8 +8,9 @@
 ![Screenshot](https://raw.githubusercontent.com/Webanet-Australia/Slim-Boilerplate/master/screenshot.jpg)
 
 
-### Original project documentation
-This is an app skeleton for the Slim PHP Micro-Framework to get started quickly
+### Features
+
+This is an app skeleton for the Slim PHP Micro-Framework to get started quickly building an admin dashboard.
 
 ## Features
 - [Eloquent ORM](https://github.com/illuminate/database)
@@ -18,7 +19,7 @@ This is an app skeleton for the Slim PHP Micro-Framework to get started quickly
 - Authentication ([Sentinel](https://github.com/cartalyst/sentinel))
 - Validation ([Respect](https://github.com/Respect/Validation) + [Slim Validation](https://github.com/awurth/slim-validation))
 - Twig templating engine [Slim Twig View](https://github.com/slimphp/Twig-View) with cache and debug
-- CSS Framework [Semantic UI](https://github.com/Semantic-Org/Semantic-UI)
+- CSS Framework [Bootstrap 4](https://getbootstrap.com/)
 - A **Gulpfile** with a watcher for *SASS* and *JS* files, and minification
 - Helpers for assets management, redirections, ...
 - Logs ([Monolog](https://github.com/Seldaek/monolog))
