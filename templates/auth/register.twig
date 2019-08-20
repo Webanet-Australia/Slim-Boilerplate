@@ -2,54 +2,70 @@
 
 {% block body %}
 
-<div class="ui middle aligned center aligned auth grid">
-    <div class="column">
-        <h2 class="ui teal header">
-            <i class="user icon"></i> Create a new account
-        </h2>
-        <form class="ui large form error" action="{{ path_for('register') }}" method="POST">
-            <div class="ui stacked segment">
-                <div class="field{% if has_error('username') %} error{% endif %}">
-                    <div class="ui left icon input">
-                        <i class="user icon"></i>
-                        <input type="text" name="username" placeholder="Username" value="{{ val('username') }}">
-                    </div>
-                </div>
-                <div class="field{% if has_error('email') %} error{% endif %}">
-                    <div class="ui left icon input">
-                        <i class="mail icon"></i>
-                        <input type="email" name="email" placeholder="Email" value="{{ val('email') }}">
-                    </div>
-                </div>
-                <div class="field{% if has_error('password') %} error{% endif %}">
-                    <div class="ui left icon input">
-                        <i class="lock icon"></i>
-                        <input type="password" name="password" placeholder="Password">
-                    </div>
-                </div>
-                <div class="field{% if has_error('password_confirm') %} error{% endif %}">
-                    <div class="ui left icon input">
-                        <i class="lock icon"></i>
-                        <input type="password" name="password_confirm" placeholder="Confirm password">
-                    </div>
-                </div>
-                {{ csrf() }}
-                <input type="submit" class="ui fluid large teal button" value="Register">
+  <div class="card o-hidden border-0 shadow-lg my-3">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+        <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+        <div class="col-lg-7">
+          <div class="px-5 py-3 mb-1">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-4">Signup for an Account!</h1>
             </div>
-            {% if has_errors() %}
-                <div class="ui error message">
-                    {% for paramErrors in errors() %}
-                        {% for error in paramErrors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    {% endfor %}
+            <form class="user" action="{{ path_for('register') }}" method="post">
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
                 </div>
-            {% endif %}
-        </form>
-        <div class="ui message">
-            You already have an account? <a href="{{ path_for('login') }}">Sign in</a>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                </div>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-user btn-block">
+                Signup
+              </button>
+              <hr>
+              <div class="row pt-5">
+                <div class="col-sm-6">
+                  <a href="{{ path_for('forgot') }}" class="btn btn-google btn-user btn-block">
+                    <i class="fab fa-google fa-fw"></i>
+                    Signup with Google
+                  </a>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <a href="{{ path_for('forgot') }}" class="btn btn-facebook btn-user btn-block">
+                    <i class="fab fa-facebook-f fa-fw"></i>
+                    Signup with Facebook
+                  </a>
+                </div>
+              </div>
+            </form>
+            <hr>
+            <div class="row pt-5">
+              <div class="col-sm-6">
+                <a class="small" href="{{ path_for('forgot') }}">Forgot Password?</a>
+              </div>
+              <div class="col-sm-6 text-right">
+                <a class="small" href="{{ path_for('login') }}">Already have an account? Login!</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  <!-- {% if has_errors() %} <div class="ui error message"> {% for paramErrors in errors() %} {% for error in paramErrors %} <p>{{ error }}</p> {% endfor %} {% endfor %} </div> {% endif %} </form> <div class="ui message"> You already have an account?
+  <a href="{{ path_for('login') }}">Sign in</a> </div> </div> </div>-->
 
 {% endblock %}

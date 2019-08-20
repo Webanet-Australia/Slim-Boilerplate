@@ -1,27 +1,61 @@
 {
-  "name": "slim-base",
-  "version": "4.0.0",
-  "description": "Slim PHP Micro-Framework skeleton",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/awurth/Slim.git"
+  "title": "Preset",
+  "name": "Preset Website Builder",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node_modules/.bin/gulp watch"
+  },
+  "description": "Website manager and builder with vvvweb.",
+  "keywords": [
+    "website",
+    "builder",
+    "cms",
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template",
+    "admin",
+    "app"
+  ],
+  "homepage": "https://preset.cloud",
+  "bugs": {
+    "url": "https://preset.cloud",
+    "email": "hello@preset.cloud"
   },
   "license": "MIT",
-  "homepage": "https://github.com/awurth/Slim#readme",
-  "devDependencies": {
-    "babel-preset-env": "^1.6.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^3.0.0",
-    "pump": "^1.0.3"
+  "author": "Webanet, Start Bootstrap",
+  "contributors": [
+    "David Miller (http://davidmiller.io/)",
+    "Isaac Perkins (zak@webanet.com.au)"
+  ],
+  "repository": {
+    "type": "svn",
+    "url": "https://helixteamhub.cloud/ze/projects/preset_cloud/repositories/subversion/app.preset"
   },
   "dependencies": {
-    "semantic-ui": "^2.2.13"
+    "@fortawesome/fontawesome-free": "5.9.0",
+    "bootstrap": "4.3.1",
+    "chart.js": "2.8.0",
+    "datatables.net-bs4": "1.10.19",
+    "jquery": "3.4.1",
+    "jquery.easing": "^1.4.1",
+    "jquery.hotkeys": "^0.1.0",
+    "simple-line-icons": "^2.4.1",
+    "vvvebjs": "0.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.7",
+    "del": "4.1.1",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "6.1.0",
+    "gulp-clean-css": "4.2.0",
+    "gulp-header": "2.0.7",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.2",
+    "gulp-uglify": "3.0.2",
+    "merge-stream": "2.0.0"
   }
 }

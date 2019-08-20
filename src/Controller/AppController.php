@@ -10,6 +10,16 @@ class AppController extends Controller
 {
     public function home(Request $request, Response $response)
     {
-        return $this->render($response, 'app/home.twig');
+        $template = 'home';
+
+        if(!$this->auth->getUser()) {
+          $template = 'index';
+        }
+
+        $data = [
+          'projects' => $this->auth->getUser()->projects()->get()
+        ];
+
+        return $this->render($response, "app/$template.twig", $data);
     }
 }

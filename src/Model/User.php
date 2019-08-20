@@ -6,7 +6,7 @@ use Cartalyst\Sentinel\Users\EloquentUser;
 
 class User extends EloquentUser
 {
-    protected $table = 'user';
+    protected $table = 'users';
 
     protected $primaryKey = 'id';
 
@@ -20,4 +20,9 @@ class User extends EloquentUser
     ];
 
     protected $loginNames = ['username', 'email'];
+
+    public function projects()
+    {
+        return $this->hasMany('App\Model\Project');
+    }
 }

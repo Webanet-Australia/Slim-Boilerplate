@@ -9,7 +9,9 @@ $tables = [
     'role_users',
     'throttle',
     'roles',
-    'user'
+    'project_users',
+    'projects',
+    'users'
 ];
 
 Manager::schema()->disableForeignKeyConstraints();

@@ -17,20 +17,27 @@ class AuthController extends Controller
     public function login(Request $request, Response $response)
     {
         if ($request->isPost()) {
+
             $credentials = [
-                'username' => $request->getParam('username'),
+                'email' => $request->getParam('email'),
                 'password' => $request->getParam('password')
             ];
-            $remember = (bool)$request->getParam('remember');
+
+            $remember = (bool) $request->getParam('remember');
 
             try {
+
                 if ($this->auth->authenticate($credentials, $remember)) {
+
                     $this->flash('success', 'You are now logged in.');
 
                     return $this->redirect($response, 'home');
+
                 } else {
+
                     $this->validator->addError('auth', 'Bad username or password');
                 }
+
             } catch (ThrottlingException $e) {
                 $this->validator->addError('auth', 'Too many attempts!');
             }
@@ -94,6 +101,12 @@ class AuthController extends Controller
 
         return $this->render($response, 'auth/register.twig');
     }
+
+    public function forgot(Request $request, Response $response)
+    {
+
+    }
+
 
     public function logout(Request $request, Response $response)
     {
