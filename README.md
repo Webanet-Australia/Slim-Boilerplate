@@ -8,6 +8,9 @@
 ![Screenshot](https://raw.githubusercontent.com/Webanet-Australia/Slim-Boilerplate/master/screenshot.jpg)
 
 
+### Forked from Awurth/Slim
+[Awurth/Slim](https://github.com/awurth/Slim)
+
 ### Features
 
 This is an app skeleton for the Slim PHP Micro-Framework to get started quickly building an admin dashboard.
