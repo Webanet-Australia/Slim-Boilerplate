@@ -1,0 +1,33 @@
+{% set columns = 2 %}
+  <div class="row">
+    {% for row in projects %}
+    <div class="col-lg-6">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">{{row.title}}</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-header">Edit Project</div>
+              <a class="dropdown-item" href="/projects/{{row.name}}/content">Content Editor</a>
+              <a class="dropdown-item" href="/projects/{{row.name}}/edit">Edit Project</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">View Site</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{row.title}}</h5>
+          <p class="card-text mt-2">{{row.description}}</p>
+          <h6 class="card-subtitle mt-4 text-muted">View: <a href="https://{{row.url}}.preset.cloud">{{row.url}}.preset.cloud</a></h6>
+        </div>
+      </div>
+    </div>
+    {% if loop.index % columns %}
+        </div>
+        <div class="row">
+    {% endif %}
+  </div>
+{% endfor %}
