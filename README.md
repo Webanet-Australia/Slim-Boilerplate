@@ -3,9 +3,9 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/297ce2e4-166d-45d5-8d11-ae0651a8c7ac/mini.png)](https://insight.sensiolabs.com/projects/297ce2e4-166d-45d5-8d11-ae0651a8c7ac) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/awurth/Slim/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/awurth/Slim/?branch=master)
 
 
-##Fork for SB Admin 2 dashboard from startbootstrap.com.
+## Fork for SB Admin 2 dashboard from startbootstrap.com.
 
-[![Screenshot](https://raw.githubusercontent.com/Webanet-Australia/Slim-Boilerplate/master/screenshot.jpg)
+[![Screenshot](https://raw.githubusercontent.com/Webanet-Australia/Slim-Boilerplate/master/screenshot.jpg)]
 
 
 ### Original project documentation
