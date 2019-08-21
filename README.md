@@ -78,3 +78,7 @@ Using supplied code formatting file (same as PHPUnit)
 ``` bash
 $ ./php-cs-fixer fix http
 ```
+
+### Support 
+
+Contact [Webanet Australia](http://webanet.com.au) or use the issue tracker here.
