@@ -6,7 +6,8 @@ var/cache/*
 !var/cache/.gitkeep
 var/log/*
 !var/log/.gitkeep
-public/assets/css/*
+public/assets/css/app.css
+public/assets/css/landing/landing-page.css
 !public/assets/css/.gitkeep
 public/assets/js/*
 !public/assets/js/.gitkeep

@@ -1,21 +1,4 @@
-<!--<nav class="ui borderless top fixed menu">
-    <a href="" class="header item">Slim Skeleton</a>
-    <div class="right menu">
-        {% if auth.check() %}
-            <div class="header item"></div>
-            <div class="item">
-                <a href="{{ path_for('logout') }}" class="ui teal circular button">Logout</a>
-            </div>
-        {% else %}
-            <div class="item">
-                <a href="{{ path_for('login') }}" class="ui circular button">Login</a>
-            </div>
-            <div class="item">
-                <a href="{{ path_for('register') }}" class="ui teal circular button">Register</a>
-            </div>
-        {% endif %}
-    </div>
-</nav>-->
+
 <!-- Sidebar -->
 {% if auth.check() %}
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -25,7 +8,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">Preset <sup>3</sup></div>
+    <div class="sidebar-brand-text mx-3">App <sup>2</sup></div>
   </a>
 
   <!-- Divider -->
@@ -40,22 +23,6 @@
 
   <li><hr class="sidebar-divider"></li>
 
-  <li class="nav-item">
-    <a id="projects" class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-      <i class="fas fa-fw fa-folder"></i>
-      <span>Projects</span>
-    </a>
-    <div id="collapsePages" class="collapse" aria-labelledby="projects" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        {% for row in projects %}
-          <a class="collapse-item" href="/projects/{{row.name}}">{{row.title}}</a>
-        {% endfor %}
-        <!--<div class="collapse-divider"></div>-->
-      </div>
-    </div>
-  </li>
-
-
   <!-- Nav Item - Utilities Collapse Menu -->
   <li class="nav-item">
     <a id="headingUtilities" class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -64,10 +31,8 @@
     </a>
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Settings Utilities:</h6>
-        <a class="collapse-item" href="utilities-color.html">Domains</a>
-        <a class="collapse-item" href="utilities-border.html">Files</a>
-        <a class="collapse-item" href="utilities-animation.html">Configuration</a>
+        <h6 class="collapse-header">Collapse Utility:</h6>
+        <a class="collapse-item" href="utilities-color.html">Collaps Item</a>
       </div>
     </div>
   </li>
