@@ -1,5 +1,5 @@
 {
-    "name": "Webanet-Australia/Slim-Boilerplate",
+    "name": "webanet-australia/slim-boilerplate",
     "description": "Slim PHP Micro-Framework skeleton with SB Admin2 Dashboard from startbootstrap.com",
     "keywords": ["slim", "eloquent", "twig", "bootstrap 4", "framework", "boilerplate", "skeleton", "Dashboard", "SB Admin 2", "Slim Start Bootstrap"],
     "homepage": "https://github.com/Webanet-Australia/Slim-Boilerplate",
