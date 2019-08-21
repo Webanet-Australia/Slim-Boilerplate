@@ -110,8 +110,7 @@ function css() {
 function js() {
   return gulp
     .src([
-      './public/assets/js/*.js',
-      '!./public/assets/js/*.min.js',
+      './assets/js/*.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {
@@ -120,7 +119,7 @@ function js() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./public/assets/js'))
     .pipe(browsersync.stream());
 }
 

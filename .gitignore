@@ -9,7 +9,7 @@ var/log/*
 public/assets/css/app.css
 public/assets/css/landing/landing-page.css
 !public/assets/css/.gitkeep
-public/assets/js/*
+public/assets/js/app.js
 !public/assets/js/.gitkeep
 
 composer.lock
