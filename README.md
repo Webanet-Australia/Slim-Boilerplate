@@ -35,7 +35,7 @@ For more information, check out the project's [website](http://awurth.fr/doc/boi
 ## Installation
 ### Create the project using Composer
 ``` bash
-$ composer create-project awurth/slim-base [project-name]
+$ composer create-project Webanet-Australia/Slim-Boilerplate [project-name]
 ```
 
 ### Setup environment variables
@@ -46,7 +46,7 @@ Copy `.env.dist` to a `.env` file and change the values to your needs. This file
 ``` bash
 $ npm install
 ```
-This will install Gulp dependencies and Semantic UI in `public/assets/lib/semantic/`.
+This will install Gulp dependencies and Boostrap 4 + FontAwesome in `public/assets/vendor/`.
 
 ### Gulp
 This skeleton uses Gulp to manage assets. The CSS and Javascript files are located in `assets/`, so you have to use Gulp after creating your project to generate the minified files in `public/`, which will be ignored by Git.
@@ -75,4 +75,9 @@ The skeleton uses a cache system for Twig templates and the Monolog library for 
 First, create a database with the name you set in the `.env` file. Then you can create the tables by running this command:
 ``` bash
 $ php bin/console db
+```
+### Format PHP Code
+Using supplied code formatting file (same as PHPUnit)
+``` bash
+$ ./php-cs-fixer fix http
 ```
