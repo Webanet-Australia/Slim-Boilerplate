@@ -55,7 +55,6 @@ $container['twig'] = function ($container) {
 
     $twig->getEnvironment()->addGlobal('flash', $container['flash']);
     $twig->getEnvironment()->addGlobal('auth', $container['auth']);
-
     $twig->getEnvironment()->addGlobal('settings', $container['settings']);
 
     return $twig;

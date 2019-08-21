@@ -1,38 +1,23 @@
 {
-  "title": "Preset",
-  "name": "Preset Website Builder",
-  "version": "0.0.1",
+"name": "slim-base",
+  "version": "4.1.0",
+  "description": "Slim PHP Micro-Framework skeleton",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awurth/Slim.git"
+  },
   "scripts": {
     "start": "node_modules/.bin/gulp watch"
   },
-  "description": "Website manager and builder with vvvweb.",
-  "keywords": [
-    "website",
-    "builder",
-    "cms",
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template",
-    "admin",
-    "app"
-  ],
-  "homepage": "https://preset.cloud",
-  "bugs": {
-    "url": "https://preset.cloud",
-    "email": "hello@preset.cloud"
-  },
-  "license": "MIT",
-  "author": "Webanet, Start Bootstrap",
+  "author": "Webanet, Start Bootstrap, Slim Boilerplate",
   "contributors": [
+    "Alexis Wurth (awurth.dev@gmail.com)",
     "David Miller (http://davidmiller.io/)",
     "Isaac Perkins (zak@webanet.com.au)"
   ],
   "repository": {
-    "type": "svn",
-    "url": "https://helixteamhub.cloud/ze/projects/preset_cloud/repositories/subversion/app.preset"
+    "type": "git",
+    "url": "https://github.com/Webanet-Australia/Slim-Boilerplate"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.9.0",
@@ -42,8 +27,7 @@
     "jquery": "3.4.1",
     "jquery.easing": "^1.4.1",
     "jquery.hotkeys": "^0.1.0",
-    "simple-line-icons": "^2.4.1",
-    "vvvebjs": "0.0.1"
+    "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
     "browser-sync": "2.26.7",

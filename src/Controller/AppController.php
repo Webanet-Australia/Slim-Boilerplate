@@ -16,10 +16,6 @@ class AppController extends Controller
           $template = 'index';
         }
 
-        $data = [
-          'projects' => $this->auth->getUser()->projects()->get()
-        ];
-
-        return $this->render($response, "app/$template.twig", $data);
+        return $this->render($response, "app/$template.twig");
     }
 }
