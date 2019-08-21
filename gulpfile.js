@@ -18,14 +18,12 @@ const pkg = require('./package.json');
 
 // Set the banner content
 const banner = ['/*!\n',
-  ' * Preset - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2018-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %>\n',
+  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
   ' */\n',
   '\n'
 ].join('');
-
-let vendorDir = './public/assets/vendor/';
 
 // BrowserSync
 function browserSync(done) {
@@ -46,58 +44,40 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del([vendorDir]);
+  return del(["./public/assets/vendor/"]);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
-
   // Bootstrap JS
   var bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/*')
-    .pipe(gulp.dest(vendorDir + 'bootstrap/js'));
+    .pipe(gulp.dest('./public/assets/vendor/bootstrap/js'));
   // Bootstrap SCSS
   var bootstrapSCSS = gulp.src('./node_modules/bootstrap/scss/**/*')
-    .pipe(gulp.dest(vendorDir + 'bootstrap/scss'));
-
-  // Bootstrap CSS (landing page)
-  var bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.min.css')
-    .pipe(gulp.dest(vendorDir + 'bootstrap/css'))
-
-  var popper = gulp.src(['./node_modules/popper.js/dist/umd/popper.min.js', './node_modules/popper.js/dist/umd/popper.min.js.map'])
-    .pipe(gulp.dest(vendorDir + 'popper'));
+    .pipe(gulp.dest('./public/assets/vendor/bootstrap/scss'));
   // ChartJS
-  //var chartJS = gulp.src('./node_modules/chart.js/dist/*.js')
-  //  .pipe(gulp.dest(vendorDir + 'chart.js'));
+  var chartJS = gulp.src('./node_modules/chart.js/dist/*.js')
+    .pipe(gulp.dest('./public/assets/vendor/chart.js'));
   // dataTables
-  //var dataTables = gulp.src([
-  //    './node_modules/datatables.net/js/*.js',
-  //    './node_modules/datatables.net-bs4/js/*.js',
-  //    './node_modules/datatables.net-bs4/css/*.css'
-  //  ])
-  //  .pipe(gulp.dest(vendorDir + 'datatables'));
+  var dataTables = gulp.src([
+      './node_modules/datatables.net/js/*.js',
+      './node_modules/datatables.net-bs4/js/*.js',
+      './node_modules/datatables.net-bs4/css/*.css'
+    ])
+    .pipe(gulp.dest('./public/assets/vendor/datatables'));
   // Font Awesome
   var fontAwesome = gulp.src('./node_modules/@fortawesome/**/*')
-    .pipe(gulp.dest(vendorDir));
-
+    .pipe(gulp.dest('./vendor'));
   // jQuery Easing
   var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest(vendorDir + 'jquery-easing'));
-
+    .pipe(gulp.dest('./public/assets/vendor/jquery-easing'));
   // jQuery
   var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
-    ]).pipe(gulp.dest(vendorDir + 'jquery'));
-
-    // Simple Line Icons
-  var sliJs = gulp.src('./node_modules/simple-line-icons/fonts/**')
-    .pipe(gulp.dest(vendorDir + '/simple-line-icons/fonts'))
-
-  var sliCss = gulp.src('./node_modules/simple-line-icons/css/**')
-    .pipe(gulp.dest(vendorDir + '/simple-line-icons/css'))
-
-  //chartJS, dataTables,
-  return merge(popper, bootstrapJS, bootstrapSCSS, bootstrapCSS, fontAwesome, jquery, sliJs, sliCss);
+    ])
+    .pipe(gulp.dest('./public/assets/vendor/jquery'));
+  return merge(bootstrapJS, bootstrapSCSS, chartJS, dataTables, fontAwesome, jquery, jqueryEasing);
 }
 
 // CSS task
@@ -140,15 +120,15 @@ function js() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./public/assets/js'))
+    .pipe(gulp.dest('./js'))
     .pipe(browsersync.stream());
 }
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./assets/scss/**/*", css);
-  gulp.watch(["./public/assets/js/**/*", "!./js/**/*.min.js"], js);
-  gulp.watch("./public/assets/**/*.html", browserSyncReload);
+  gulp.watch("./scss/**/*", css);
+  gulp.watch(["./public/assets/js/**/*", "!./public/assets/js/**/*.min.js"], js);
+  gulp.watch("./**/*.html", browserSyncReload);
 }
 
 // Define complex tasks
