@@ -1,14 +1,23 @@
 {
-    "name": "awurth/slim-base",
-    "description": "Slim PHP Micro-Framework skeleton",
-    "keywords": ["slim", "eloquent", "twig", "semantic", "framework", "boilerplate", "skeleton"],
-    "homepage": "https://github.com/awurth/Slim",
+    "name": "Webanet-Australia/Slim-Boilerplate",
+    "description": "Slim PHP Micro-Framework skeleton with SB Admin2 Dashboard from startbootstrap.com",
+    "keywords": ["slim", "eloquent", "twig", "bootstrap 4", "framework", "boilerplate", "skeleton", "Dashboard", "SB Admin 2", "Slim Start Bootstrap"],
+    "homepage": "https://github.com/Webanet-Australia/Slim-Boilerplate",
     "license": "MIT",
     "authors": [
         {
             "name": "Alexis Wurth",
             "email": "awurth.dev@gmail.com",
             "homepage": "https://github.com/awurth"
+        },
+        {
+            "name" : "David Miller",
+            "homepage": "http://davidmiller.io/"
+        },
+        {
+            "name" : "Isaac Perkins",
+            "homepage" : "http://webanet.com/au/",
+            "email" : "zak@webanet.com.au"
         }
     ],
     "autoload": {
